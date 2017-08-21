@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input id="input1" type="text" class="myinput">
+	<input id="input2" type="text" class="myinput">
+	<div class="mydiv"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$('.myinput').keyup(function(e) {
+			//查詢keyCode
+			//console.log(e.keyCode);
+			if($(this).val().length<6){
+				$('.mydiv').text('最少要輸入6個字元');
+			}
+			else{
+				$('.mydiv').text($(this).val().length);
+			}
+		}).focus(function(e){
+			$(this).css('background', 'yellow');
+		}).blur(function(e){
+			$(this).css('background', 'white');
+			if($('#input1').val().length>5 && $('#input2').val().length>5){
+				if($('#input1').val() != $('#input2').val()){
+					$('.mydiv').text('密碼不相同');
+				}
+				else{
+					$('.mydiv').text('密碼相同');
+				}
+			}
+		});
+	</script>
+</body>
+</html>

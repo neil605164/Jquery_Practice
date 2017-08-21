@@ -1,0 +1,22 @@
+.wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+.header {
+    margin-top: 20px;
+}
+.header .nivoSlider {
+    border: 3px solid #FFF;
+}
+.content section div {
+    margin: 0 auto;
+    /*background: rgb(117,227,73);*/
+}
+.content section div a {
+    margin-top: 10px;
+    margin-left: 6px;
+    display: inline-block;
+}
+.content section div a img {
+    border: 3px solid #d5d5d5;
+}
